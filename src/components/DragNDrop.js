@@ -32,6 +32,7 @@ function DragNDrop({data}) {
                 newList[targetItem.grpI].items.splice(targetItem.itemI, 0, newList[dragItem.current.grpI].items.splice(dragItem.current.itemI,1)[0])
                 dragItem.current = targetItem;
                 localStorage.setItem('List', JSON.stringify(newList));
+                console.log("new list" ,newList )
                 return newList
             })
         }
